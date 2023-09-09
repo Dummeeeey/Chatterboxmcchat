@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from requests import post
 
-app = Flask("app",host="0.0.0.0")
+app = Flask("app")
 
 @app.post("/")
 def forward():
