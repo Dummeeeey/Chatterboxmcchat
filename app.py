@@ -9,5 +9,5 @@ def forward():
 	if request.is_json:
 		data = request.get_json()
 		post(data["webhook"], data["data"])
-		return 201
-	return 415
+		return data,201
+	return {"error":"yousuckpleaselockin"},415
