@@ -8,6 +8,6 @@ app = Flask("app")
 def forward():
 	if request.is_json:
 		data = request.get_json()
-		a = post(data["webhook"], data["data"])
+		post(data["webhook"], json=data["data"])
 		return str(a.status_code),201
 	return {"error":"yousuckpleaselockin"},415
